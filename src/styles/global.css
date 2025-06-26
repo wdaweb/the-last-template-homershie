@@ -139,8 +139,9 @@
 /*-------------------------------------------------------------------------*/
 
 body {
-  color: #53627c;
+  color: #fafafa;
   background-color: #141414;
+  font-family: 'Nunito', Arial, Helvetica, 'Noto Sans TC', sans-serif;
 }
 
 body {
@@ -174,7 +175,7 @@ div {
 p {
   padding: 0 0 12px;
   margin: 0;
-  color: #92949f;
+  color: #f1f1f1;
 }
 
 pre {
@@ -219,6 +220,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: 'Jost', Arial, Helvetica, 'Noto Sans TC', sans-serif;
   padding: 0;
   margin: 0 0 20px;
 }
@@ -262,7 +264,6 @@ ul > li {
 
 ul > li:before {
   content: '';
-  font-family: 'fontello';
   font-size: 5px;
   font-style: normal;
   font-weight: normal;
@@ -1696,12 +1697,10 @@ img.alignnone {
 
 #page .cmsmasters_theme_icon_resp_nav:before {
   content: '\e83c';
-  font-family: fontello-custom;
 }
 
 #page .cmsmasters_theme_icon_like:before {
   content: '\e83b';
-  font-family: fontello-custom;
 }
 
 #page .cmsmasters_theme_icon_sticky:before {
@@ -1737,41 +1736,34 @@ img.alignnone {
 #page .cmsmasters_theme_icon_comments_nav_prev:before,
 #page .cmsmasters_prev_arrow span:before {
   content: '\e836';
-  font-family: fontello-custom;
 }
 
 #page .cmsmasters_theme_icon_pagination_prev:before {
   content: '\e83e';
-  font-family: fontello-custom;
 }
 
 #page .cmsmasters_theme_icon_slide_next:before,
 #page .cmsmasters_theme_icon_comments_nav_next:before,
 #page .cmsmasters_next_arrow span:before {
   content: '\e837';
-  font-family: fontello-custom;
 }
 
 #page .cmsmasters_theme_icon_pagination_next:before {
   content: '\e832';
-  font-family: fontello-custom;
 }
 
 #page .cmsmasters_theme_icon_resp_nav_slide_down:before,
 #page .cmsmasters_theme_icon_slide_bottom:before {
   content: '\e835';
-  font-family: fontello-custom;
 }
 
 #page .cmsmasters_theme_icon_resp_nav_slide_up:before,
 #page .cmsmasters_theme_icon_slide_top:before {
   content: '\e838';
-  font-family: fontello-custom;
 }
 
 #page .cmsmasters_slide_top_icon:before {
   content: '\eb27';
-  font-family: fontello;
 }
 
 #page .cmsmasters_theme_icon_user_mail:before {
@@ -1792,17 +1784,14 @@ img.alignnone {
 
 #page .cmsmasters_theme_icon_user_twitter:before {
   content: '\e804';
-  font-family: fontello-custom;
 }
 
 html .cmsmasters_theme_icon_cancel:before {
   content: '\e83a';
-  font-family: fontello-custom;
 }
 
 html .cmsmasters_theme_icon_search:before {
   content: '\e83d';
-  font-family: fontello-custom;
 }
 
 /***************** Elements ******************/
@@ -1835,7 +1824,6 @@ html .cmsmasters_theme_icon_search:before {
 
 .cmsmasters_prev_arrow span:before,
 .cmsmasters_next_arrow span:before {
-  font-family: 'fontello';
   font-size: 25px;
   line-height: 25px;
   text-align: center;
@@ -2941,7 +2929,7 @@ div.subpage_nav > a {
 
 .share_posts a:before {
   text-indent: 0;
-  font-family: fontello;
+
   text-align: center;
   width: 1em;
   height: 1em;
@@ -3922,7 +3910,6 @@ div.subpage_nav > a {
 
 .header_mid .mid_nav_wrap .mid_nav > li.menu-item-has-children > a:before {
   content: '\e94a';
-  font-family: 'fontello';
   font-size: 8px;
   line-height: 12px;
   height: 12px;
@@ -10198,7 +10185,7 @@ div.wpforms-container .wpforms-form div.wpforms-submit-container button[type='su
 .widget_archive ul li a:before {
   position: relative;
   content: '\e844';
-  font-family: 'fontello-custom';
+
   margin-right: 15px;
 }
 
@@ -10291,7 +10278,7 @@ div.wpforms-container .wpforms-form div.wpforms-submit-container button[type='su
   content: '\e83e';
   line-height: 10px;
   font-size: 7px;
-  font-family: 'fontello-custom';
+
   position: absolute;
   left: 0;
   top: 5px;
@@ -10307,7 +10294,6 @@ div.wpforms-container .wpforms-form div.wpforms-submit-container button[type='su
   content: '\e832';
   line-height: 10px;
   font-size: 7px;
-  font-family: 'fontello-custom';
   position: absolute;
   right: 0;
   top: 5px;

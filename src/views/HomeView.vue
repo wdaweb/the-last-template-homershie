@@ -2,6 +2,8 @@
   <div class="home">
     <HeroSection />
     <AboutSection />
+    <ServiceSection />
+    <PortfolioSection />
     <ContactSection />
     <FeedbackSection />
   </div>
@@ -10,6 +12,8 @@
 <script setup>
 import HeroSection from '@/components/HeroSection.vue'
 import AboutSection from '@/components/AboutSection.vue'
+import ServiceSection from '@/components/ServiceSection.vue'
+import PortfolioSection from '@/components/PortfolioSection.vue'
 import FeedbackSection from '@/components/FeedbackSection.vue'
 import ContactSection from '@/components/ContactSection.vue'
 </script>
