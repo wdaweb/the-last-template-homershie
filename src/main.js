@@ -2,6 +2,7 @@ import 'element-plus/dist/index.css'
 import '@/styles/reset.css'
 import '@/styles/global.css'
 import '@/styles/variables.css'
+import '@/styles/el-override.css'
 import '@/styles/rwd.css'
 import '@/styles/main.css'
 

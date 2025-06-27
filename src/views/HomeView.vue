@@ -4,8 +4,11 @@
     <AboutSection />
     <ServiceSection />
     <PortfolioSection />
-    <ContactSection />
+    <ProcessSection />
     <FeedbackSection />
+    <ContactSection />
+    <BlogSection />
+    <BottomSection />
   </div>
 </template>
 
@@ -14,8 +17,11 @@ import HeroSection from '@/components/HeroSection.vue'
 import AboutSection from '@/components/AboutSection.vue'
 import ServiceSection from '@/components/ServiceSection.vue'
 import PortfolioSection from '@/components/PortfolioSection.vue'
+import ProcessSection from '@/components/ProcessSection.vue'
 import FeedbackSection from '@/components/FeedbackSection.vue'
 import ContactSection from '@/components/ContactSection.vue'
+import BlogSection from '@/components/BlogSection.vue'
+import BottomSection from '@/components/BottomSection.vue'
 </script>
 
 <style scoped>

@@ -1,52 +1,189 @@
 <template>
-  <el-container class="contact-section">
+  <el-container class="contact-section" id="contact">
     <el-main>
-      <el-row justify="center">
-        <el-col :span="20">
-          <h2 class="section-title">聯絡我們</h2>
-          <el-row :gutter="40">
-            <el-col :span="12">
-              <el-card class="contact-info">
-                <el-descriptions direction="vertical" :column="1" border>
-                  <el-descriptions-item label="地址">
-                    <el-icon><Location /></el-icon>
-                    台北市信義區信義路五段7號
-                  </el-descriptions-item>
-                  <el-descriptions-item label="電話">
-                    <el-icon><Phone /></el-icon>
-                    02-1234-5678
-                  </el-descriptions-item>
-                  <el-descriptions-item label="電子郵件">
-                    <el-icon><Message /></el-icon>
-                    contact@example.com
-                  </el-descriptions-item>
-                </el-descriptions>
-              </el-card>
-            </el-col>
-            <el-col :span="12">
-              <el-card>
-                <el-form :model="form" label-position="top">
-                  <el-form-item label="姓名" required>
-                    <el-input v-model="form.name" placeholder="請輸入您的姓名" />
-                  </el-form-item>
-                  <el-form-item label="電子郵件" required>
-                    <el-input v-model="form.email" placeholder="請輸入您的電子郵件" />
-                  </el-form-item>
-                  <el-form-item label="訊息" required>
-                    <el-input
-                      v-model="form.message"
-                      type="textarea"
-                      :rows="4"
-                      placeholder="請輸入您的訊息"
-                    />
-                  </el-form-item>
-                  <el-form-item>
-                    <el-button type="primary" @click="submitForm">送出</el-button>
-                  </el-form-item>
-                </el-form>
-              </el-card>
-            </el-col>
-          </el-row>
+      <el-row>
+        <el-col :span="24">
+          <h2>Get in <span class="gradient-stroke-text">TOUCH</span></h2>
+        </el-col>
+      </el-row>
+      <el-row>
+        <el-col :span="24">
+          <div class="cmsmasters_row_margin cmsmasters_1212">
+            <div id="cmsmasters_column_k0bxql2by" class="cmsmasters_column one_half">
+              <div class="cmsmasters_column_inner">
+                <div class="cmsmasters_text">
+                  <h4>Contact Information</h4>
+                  <p>Your email address is safe with us. Required fields are noted with *</p>
+                  <div class="contact-information-wrapper">
+                    <div class="contact-block">
+                      <div id="cmsmasters_icon_slxpsfqzvs" class="cmsmasters_icon_wrap">
+                        <span class="cmsmasters_simple_icon cmsmasters-icon-phone"></span
+                        ><span class="cmsmasters_simple_icon_title"></span>
+                      </div>
+                      <div class="text-box">
+                        <h5>Phone Number</h5>
+                        <p>+001 123 456 789, +002 321 654 987</p>
+                      </div>
+                    </div>
+                    <div class="contact-block">
+                      <div id="cmsmasters_icon_6fe373ojdc" class="cmsmasters_icon_wrap">
+                        <span class="cmsmasters_simple_icon cmsmasters-icon-mail"></span
+                        ><span class="cmsmasters_simple_icon_title"></span>
+                      </div>
+                      <div class="text-box">
+                        <h5>Email Address:</h5>
+                        <p>exampleinfo@gmail.com</p>
+                      </div>
+                    </div>
+                    <div class="contact-block">
+                      <div id="cmsmasters_icon_7pu6fe3fms" class="cmsmasters_icon_wrap">
+                        <span class="cmsmasters_simple_icon cmsmasters-icon-location-3"></span
+                        ><span class="cmsmasters_simple_icon_title"></span>
+                      </div>
+                      <div class="text-box">
+                        <h5>Address:</h5>
+                        <p>26 South Street, New York, NY 98, USA.</p>
+                        <p>&nbsp;</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="cmsmasters_heading_zeqwe011o"
+                  class="cmsmasters_heading_wrap cmsmasters_heading_align_left"
+                >
+                  <h5 class="cmsmasters_heading">Social Media:</h5>
+                </div>
+                <div class="cmsmasters_sharing">
+                  <div class="share_wrap">
+                    <a
+                      data-pin-do="buttonBookmark"
+                      data-pin-custom="true"
+                      class="button cmsmasters_pinterest_button cmsmasters-icon-pinterest"
+                      data-pin-log="button_pinit_bookmarklet"
+                      data-pin-href="https://www.pinterest.com/pin/create/button/"
+                      >Pinterest</a
+                    >
+                  </div>
+                  <div class="share_wrap">
+                    <a
+                      href="https://www.facebook.com/sharer/sharer.php?display=popup&amp;u=https%3A%2F%2Fnexus.uiparadox.com%2F"
+                      class="button cmsmasters-icon-facebook"
+                      >Facebook</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="cmsmasters_column_8yewr13vm" class="cmsmasters_column one_half">
+              <div class="cmsmasters_column_inner">
+                <div class="cmsmasters_contact_form">
+                  <div
+                    class="wpcf7 js"
+                    id="wpcf7-f6-p1563-o1"
+                    lang="en-US"
+                    dir="ltr"
+                    data-wpcf7-id="6"
+                  >
+                    <div class="screen-reader-response">
+                      <p role="status" aria-live="polite" aria-atomic="true"></p>
+                      <ul></ul>
+                    </div>
+                    <form
+                      action="/#wpcf7-f6-p1563-o1"
+                      method="post"
+                      class="wpcf7-form init"
+                      aria-label="Contact form"
+                      novalidate="novalidate"
+                      data-status="init"
+                    >
+                      <div style="display: none">
+                        <input type="hidden" name="_wpcf7" value="6" />
+                        <input type="hidden" name="_wpcf7_version" value="6.0.6" />
+                        <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f6-p1563-o1" />
+                        <input type="hidden" name="_wpcf7_container_post" value="1563" />
+                        <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                      </div>
+                      <p>
+                        <label>
+                          Your name<br />
+                          <span class="wpcf7-form-control-wrap" data-name="your-name"
+                            ><input
+                              size="40"
+                              maxlength="400"
+                              class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                              autocomplete="name"
+                              aria-required="true"
+                              aria-invalid="false"
+                              value=""
+                              type="text"
+                              name="your-name"
+                          /></span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          Your email<br />
+                          <span class="wpcf7-form-control-wrap" data-name="your-email"
+                            ><input
+                              size="40"
+                              maxlength="400"
+                              class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email"
+                              autocomplete="email"
+                              aria-required="true"
+                              aria-invalid="false"
+                              value=""
+                              type="email"
+                              name="your-email"
+                          /></span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          Subject<br />
+                          <span class="wpcf7-form-control-wrap" data-name="your-subject"
+                            ><input
+                              size="40"
+                              maxlength="400"
+                              class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                              aria-required="true"
+                              aria-invalid="false"
+                              value=""
+                              type="text"
+                              name="your-subject"
+                          /></span>
+                        </label>
+                      </p>
+                      <p>
+                        <label>
+                          Your message (optional)<br />
+                          <span class="wpcf7-form-control-wrap" data-name="your-message">
+                            <textarea
+                              cols="40"
+                              rows="10"
+                              maxlength="2000"
+                              class="wpcf7-form-control wpcf7-textarea"
+                              aria-invalid="false"
+                              name="your-message"
+                            ></textarea>
+                          </span>
+                        </label>
+                      </p>
+                      <p>
+                        <input
+                          class="wpcf7-form-control wpcf7-submit has-spinner"
+                          type="submit"
+                          value="Submit"
+                        /><span class="wpcf7-spinner"></span>
+                      </p>
+                      <div class="wpcf7-response-output" aria-hidden="true"></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </el-col>
       </el-row>
     </el-main>
@@ -54,48 +191,9 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
-import { Location, Phone, Message } from '@element-plus/icons-vue'
-import { ElMessage } from 'element-plus'
-
-const form = reactive({
-  name: '',
-  email: '',
-  message: '',
-})
-
-const submitForm = () => {
-  ElMessage({
-    message: '表單已送出！',
-    type: 'success',
-  })
-}
+//
 </script>
 
-<style scoped>
-.contact-section {
-  padding: 5rem 0;
-  background-color: #fff;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #333;
-}
-
-.contact-info {
-  height: 100%;
-}
-
-:deep(.el-descriptions-item__label) {
-  font-weight: bold;
-}
-
-:deep(.el-descriptions-item__content) {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
+<style scoped lang="scss">
+//
 </style>

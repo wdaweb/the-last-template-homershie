@@ -1,0 +1,55 @@
+/* 調整 el-container 寬度以匹配 global.css 設定 */
+
+/* 主要容器寬度設定 */
+.el-container {
+  padding: 0 5% !important;
+}
+
+/* 響應式寬度設定 */
+@media only screen and (max-width: 1440px) {
+  .el-container {
+    max-width: 87.5vw !important;
+    width: 87.5vw !important;
+  }
+}
+
+/* 確保 el-main 也有適當的內邊距 */
+.el-main {
+  padding: 20px !important;
+}
+
+/* 在小螢幕上增加更多內邊距 */
+@media (max-width: 768px) {
+  .el-container {
+    padding: 0 15px !important;
+  }
+
+  .el-main {
+    padding: 15px !important;
+  }
+}
+
+/* 在超小螢幕上進一步調整 */
+@media (max-width: 480px) {
+  .el-container {
+    padding: 0 10px !important;
+  }
+
+  .el-main {
+    padding: 10px !important;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .hero-section .el-container,
+  .about-section .el-container,
+  .service-section .el-container,
+  .portfolio-section .el-container,
+  .contact-section .el-container,
+  .feedback-section .el-container,
+  .process-section .el-container,
+  .bottom-section .el-container {
+    max-width: 87.5vw !important;
+    width: 87.5vw !important;
+  }
+}

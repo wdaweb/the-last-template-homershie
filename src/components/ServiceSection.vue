@@ -1,5 +1,5 @@
 <template>
-  <el-container>
+  <el-container class="service-section" id="service">
     <el-main>
       <el-row>
         <el-col :span="12">

@@ -1,5 +1,5 @@
 <template>
-  <el-container class="hero-section">
+  <el-container class="hero-section" id="hero">
     <el-main>
       <el-row justify="center" align="middle">
         <el-col :span="16" class="text-center">
@@ -117,31 +117,6 @@ const onSlideChange = () => {
 </script>
 
 <style scoped>
-.el-main {
-  padding-top: 60px;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.hero-title {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.hero-subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  color: #666;
-}
-
-.cta-button {
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-}
-
 /* Swiper 樣式 */
 :deep(.swiper) {
   width: 100%;

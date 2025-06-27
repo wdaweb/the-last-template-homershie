@@ -1,5 +1,5 @@
 <template>
-  <el-container class="about-section">
+  <el-container class="about-section" id="about">
     <el-main>
       <el-row justify="center">
         <el-col :span="20">
