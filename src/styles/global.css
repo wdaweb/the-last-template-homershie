@@ -12625,7 +12625,7 @@ h1,
 
 h2,
 .h2 {
-  font-size: clamp(60px, 5.208vw, 100px) !important;
+  font-size: clamp(60px, 4.6vw, 100px) !important;
   /* 100px */
   font-weight: 500;
   line-height: 120% !important;

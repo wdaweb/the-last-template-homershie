@@ -26,17 +26,9 @@
               <el-icon><InfoFilled /></el-icon>
               <span>關於我們</span>
             </el-menu-item>
-            <el-menu-item index="service">
-              <el-icon><Tools /></el-icon>
-              <span>服務</span>
-            </el-menu-item>
             <el-menu-item index="portfolio">
               <el-icon><Picture /></el-icon>
               <span>作品集</span>
-            </el-menu-item>
-            <el-menu-item index="process">
-              <el-icon><Operation /></el-icon>
-              <span>流程</span>
             </el-menu-item>
             <el-menu-item index="feedback">
               <el-icon><ChatDotRound /></el-icon>
@@ -64,9 +56,7 @@ import {
   InfoFilled,
   Message,
   ChatDotRound,
-  Tools,
   Picture,
-  Operation,
   Document,
 } from '@element-plus/icons-vue'
 
@@ -77,9 +67,7 @@ const activeSection = ref('hero')
 const sections = [
   { id: 'hero', title: '首頁' },
   { id: 'about', title: '關於我們' },
-  { id: 'service', title: '服務' },
   { id: 'portfolio', title: '作品集' },
-  { id: 'process', title: '流程' },
   { id: 'feedback', title: '客戶回饋' },
   { id: 'contact', title: '聯絡我們' },
   { id: 'blog', title: '部落格' },

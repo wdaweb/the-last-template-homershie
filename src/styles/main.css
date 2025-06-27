@@ -12404,4 +12404,30 @@ html .cmsmasters_color_scheme_third .cmsmasters_product .button {
 }
 /* Start Secondary Color */
 
+/* Start Button */
+.button_wrap {
+  text-align: right;
+  float: right;
+  position: relative;
+  display: block;
+}
+
+.cus-btn {
+  background: #fff;
+  color: #141414;
+  transition: all 0.5s ease;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(253, 220, 139, 0.95) 0%, rgba(40, 208, 232, 0.95) 100%);
+  }
+}
+/* Finish Button */
+
 /***************** Finish Custom 3 WooCommerce Color Scheme Rules ******************/
