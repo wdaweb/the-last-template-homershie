@@ -177,6 +177,7 @@ p {
   border: none;
   color: #141414;
   transition: all 0.5s ease;
+  padding: 4px 40px;
   font-size: 19px;
   font-weight: 600;
   &:hover {
