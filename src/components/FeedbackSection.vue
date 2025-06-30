@@ -1,7 +1,7 @@
 <template>
   <el-container class="feedback-section" id="feedback">
     <el-main>
-      <el-row>
+      <el-row class="title-row">
         <el-col :span="24">
           <h2>
             Feedback From Our<br />
@@ -9,8 +9,8 @@
           </h2>
         </el-col>
       </el-row>
-      <el-row>
-        <el-col :span="12">
+      <el-row class="content-row" :gutter="40">
+        <el-col :span="12" class="img-center">
           <img
             decoding="async"
             src="https://nexus.uiparadox.com/wp-content/uploads/2024/09/map-img-3.png"
@@ -136,6 +136,20 @@ import 'swiper/css/pagination'
 </script>
 
 <style scoped lang="scss">
+.title-row {
+  padding: 80px 0;
+}
+
+.content-row {
+  padding-bottom: 50px;
+}
+
+.img-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .tabs > .el-tabs__content {
   padding: 32px;
   color: #6b778c;
