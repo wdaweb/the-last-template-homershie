@@ -219,4 +219,96 @@ const handleClick = (tab, event) => {
 :deep(.el-tab-pane) {
   position: relative;
 }
+
+/* 自定義 el-tab 按鈕樣式 */
+.el-tabs__content {
+  padding: 48px 0 !important;
+}
+
+.el-tabs__header {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-bottom: 1.2rem !important;
+}
+
+.el-tabs__nav-wrap {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.el-tabs__nav-scroll {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
+.el-tabs__nav {
+  text-align: center !important;
+  margin-bottom: clamp(16px, 1.667vw, 48px) !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  row-gap: clamp(16px, 1.25vw, 48px) !important;
+  column-gap: clamp(16px, 1.25vw, 32px) !important;
+}
+
+.el-tabs__item {
+  background-color: transparent !important;
+  border: 1px solid rgb(250, 250, 250) !important;
+  box-sizing: border-box !important;
+  color: rgb(250, 250, 250) !important;
+  cursor: pointer !important;
+  display: block !important;
+  font-family: Jost, Arial, Helvetica, 'Nimbus Sans L', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  height: 52px !important;
+  line-height: 18px !important;
+  margin: 0 !important;
+  outline: none !important;
+  padding: 16px !important;
+  position: relative !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  text-rendering: optimizelegibility !important;
+  transition:
+    color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out !important;
+  vertical-align: baseline !important;
+  width: 128.109px !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+/* 選中狀態的樣式 */
+.el-tabs__item.is-active {
+  color: rgb(253, 220, 139) !important;
+  border-color: rgb(253, 220, 139) !important;
+}
+
+/* 懸停狀態的樣式 */
+.el-tabs__item:hover {
+  color: rgb(253, 220, 139) !important;
+  border-color: rgb(253, 220, 139) !important;
+}
+
+/* 移除 Element Plus 的默認邊框樣式 */
+.el-tabs__item:before,
+.el-tabs__item:after,
+.el-tabs__header:before,
+.el-tabs__header:after,
+.el-tabs__nav-wrap:before,
+.el-tabs__nav-wrap:after,
+.el-tabs__active-bar {
+  display: none !important;
+}
 </style>

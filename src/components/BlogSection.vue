@@ -1,12 +1,12 @@
 <template>
   <el-container class="blog-section" id="blog">
     <el-main>
-      <el-row>
+      <el-row class="title-row">
         <el-col :span="24">
           <h2>Explore Our <span class="gradient-stroke-text">LATEST BLOGS</span></h2>
         </el-col>
       </el-row>
-      <el-row>
+      <el-row class="content-row">
         <el-col :span="8">
           <article
             id="post-376"
@@ -248,3 +248,25 @@
     </el-main>
   </el-container>
 </template>
+
+<style scoped lang="scss">
+.el-col {
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+}
+.title-row {
+  padding-top: 80px;
+  padding-bottom: 48px;
+}
+.content-row {
+  padding-bottom: 80px;
+}
+
+.cmsmasters_post_title {
+  line-height: 80% !important;
+}
+
+.cmsmasters_post_read_more {
+  transition: all 0.3s ease;
+}
+</style>

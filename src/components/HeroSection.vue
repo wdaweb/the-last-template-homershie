@@ -26,7 +26,9 @@
           </p>
         </el-col>
         <el-col :span="6" :offset="6">
-          <p style="background: none">fiverr. <i class="fa-solid fa-star"></i> 5.0</p>
+          <p style="background: none">
+            fiverr. <el-icon class="star-icon" :size="16"><Star /></el-icon> 5.0
+          </p>
           <p class="Janiefier">
             <span>Janiefier</span>
             A creative agency is a company that provides a range of services to help businesses and
@@ -100,6 +102,7 @@
 import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay } from 'swiper/modules'
+import { Star } from '@element-plus/icons-vue'
 
 // 導入 Swiper 樣式
 import 'swiper/css'

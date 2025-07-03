@@ -23,6 +23,7 @@
 <style scoped lang="scss">
 .footer-section {
   text-align: center;
+  background: #1e1f20 !important;
 
   #footer {
     display: flex;
@@ -34,6 +35,7 @@
   .footer_copyright {
     text-align: center;
     display: block;
+    color: #fafafa;
   }
 }
 </style>

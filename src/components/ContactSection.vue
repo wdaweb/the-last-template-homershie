@@ -16,7 +16,7 @@
                 <div class="contact-information-wrapper">
                   <div class="contact-block">
                     <div id="cmsmasters_icon_slxpsfqzvs" class="cmsmasters_icon_wrap">
-                      <span class="fa-solid fa-phone"></span>
+                      <el-icon class="contact-icon" :size="40"><Phone /></el-icon>
                       <span class="cmsmasters_simple_icon_title"></span>
                     </div>
                     <div class="text-box">
@@ -26,7 +26,7 @@
                   </div>
                   <div class="contact-block">
                     <div id="cmsmasters_icon_6fe373ojdc" class="cmsmasters_icon_wrap">
-                      <span class="fa-solid fa-envelope"></span>
+                      <el-icon class="contact-icon" :size="40"><Message /></el-icon>
                       <span class="cmsmasters_simple_icon_title"></span>
                     </div>
                     <div class="text-box">
@@ -36,7 +36,7 @@
                   </div>
                   <div class="contact-block">
                     <div id="cmsmasters_icon_7pu6fe3fms" class="cmsmasters_icon_wrap">
-                      <span class="fa-solid fa-location-dot"></span>
+                      <el-icon class="contact-icon" :size="40"><Location /></el-icon>
                       <span class="cmsmasters_simple_icon_title"></span>
                     </div>
                     <div class="text-box">
@@ -48,7 +48,7 @@
                 </div>
               </div>
               <div
-                id="cmsmasters_heading_zeqwe011o"
+                id="cmsmasters_heading"
                 class="cmsmasters_heading_wrap cmsmasters_heading_align_left"
               >
                 <h5 class="cmsmasters_heading">Social Media:</h5>
@@ -58,18 +58,22 @@
                   <a
                     data-pin-do="buttonBookmark"
                     data-pin-custom="true"
-                    class="button cmsmasters_pinterest_button cmsmasters-icon-pinterest"
+                    class="button cmsmasters_pinterest_button"
                     data-pin-log="button_pinit_bookmarklet"
                     data-pin-href="https://www.pinterest.com/pin/create/button/"
-                    >Pinterest</a
                   >
+                    <el-icon class="social-icon" :size="18"><Share /></el-icon>
+                    Pinterest
+                  </a>
                 </div>
                 <div class="share_wrap">
                   <a
                     href="https://www.facebook.com/sharer/sharer.php?display=popup&amp;u=https%3A%2F%2Fnexus.uiparadox.com%2F"
-                    class="button cmsmasters-icon-facebook"
-                    >Facebook</a
+                    class="button"
                   >
+                    <el-icon class="social-icon" :size="18"><Share /></el-icon>
+                    Facebook
+                  </a>
                 </div>
               </div>
             </div>
@@ -191,7 +195,7 @@
 </template>
 
 <script setup>
-//
+import { Phone, Message, Location, Share } from '@element-plus/icons-vue'
 </script>
 
 <style scoped lang="scss">
@@ -207,6 +211,14 @@
 }
 .cmsmasters_column {
   padding: 28px;
+}
+
+.cmsmasters_icon_wrap {
+  padding: 4px;
+}
+
+.cmsmasters_heading {
+  margin-bottom: 24px;
 }
 
 .button,

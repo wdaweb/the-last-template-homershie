@@ -170,13 +170,13 @@ import 'swiper/css/pagination'
     margin-top: 20px;
   }
 
-  .swiper-pagination-bullet {
-    background: #666;
-    opacity: 0.5;
+  :deep(.swiper-pagination-bullet) {
+    background: #28d0e8 !important;
+    opacity: 1 !important;
+    margin: 0 6px !important;
 
     &.swiper-pagination-bullet-active {
-      background: #007bff;
-      opacity: 1;
+      background: #fafafa !important;
     }
   }
 }
@@ -194,18 +194,44 @@ import 'swiper/css/pagination'
   }
 
   .cmsmasters_quote_title {
-    color: #333;
     margin-bottom: 5px;
+    font-size: clamp(18px, 1.563vw, 60px) !important;
+    font-weight: 500 !important;
+    line-height: 120% !important;
+    text-align: start !important;
   }
 
   .cmsmasters_quote_subtitle {
-    color: #666;
     margin-bottom: 15px;
+    font-size: clamp(15px, 1.042vw, 40px) !important;
+    font-weight: 500 !important;
+    line-height: 120% !important;
+    text-align: start;
   }
 
   .cmsmasters_quote_content {
     color: #555;
     line-height: 1.6;
   }
+}
+
+.cmsmasters_quote_image img {
+  border-color: #28d0e8;
+  width: 80px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  border-width: 3px;
+  border-style: solid;
+}
+
+.cmsmasters_quote_content p {
+  font-size: clamp(15px, 0.833vw, 22px) !important;
+  font-weight: 400 !important;
+  line-height: 150% !important;
+  text-align: start;
+  padding: 0 0 12px;
+  margin: 0;
+  color: #92949f;
 }
 </style>
