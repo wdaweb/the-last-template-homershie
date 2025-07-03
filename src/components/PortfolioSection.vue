@@ -100,13 +100,13 @@ watch(activeName, async (newVal, oldVal) => {
 })
 
 // Tab 樣式控制
-const getTabStyle = (tabName, index) => {
+const getTabStyle = () => {
   // 所有 tab 都顯示，通過 z-index 和 transform 控制層級
   return { display: 'block' }
 }
 
 // 動畫 class 控制
-const getTabClass = (tabName, index) => {
+const getTabClass = (tabName) => {
   const currentIndex = getTabIndex(activeName.value)
   const lastIndex = getTabIndex(lastActiveName.value)
   const thisIndex = getTabIndex(tabName)
@@ -293,7 +293,6 @@ const handleClick = (tab, event) => {
   transition:
     color 0.3s ease-in-out,
     border-color 0.3s ease-in-out !important;
-  vertical-align: baseline !important;
   width: 128.109px !important;
   -webkit-font-smoothing: antialiased !important;
 }
