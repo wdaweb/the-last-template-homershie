@@ -1,7 +1,7 @@
 <template>
   <el-container class="service-section" id="service">
     <el-main>
-      <el-row>
+      <el-row class="title-row">
         <el-col :span="16">
           <h2>Explore Our Range of <span class="gradient-stroke-text">SERVICES</span></h2>
         </el-col>
@@ -67,8 +67,9 @@
 </template>
 
 <style scoped lang="scss">
-.service-row {
-  padding: 80px 0;
+.title-row {
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .service-row-reverse {
   flex-direction: row-reverse;

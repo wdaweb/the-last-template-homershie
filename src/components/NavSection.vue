@@ -20,27 +20,27 @@
           >
             <el-menu-item index="hero">
               <el-icon><HomeFilled /></el-icon>
-              <span>首頁</span>
+              <span>Home</span>
             </el-menu-item>
             <el-menu-item index="about">
               <el-icon><InfoFilled /></el-icon>
-              <span>關於我們</span>
+              <span>About</span>
             </el-menu-item>
             <el-menu-item index="portfolio">
               <el-icon><Picture /></el-icon>
-              <span>作品集</span>
+              <span>Portfolio</span>
             </el-menu-item>
             <el-menu-item index="feedback">
               <el-icon><ChatDotRound /></el-icon>
-              <span>客戶回饋</span>
+              <span>Feedback</span>
             </el-menu-item>
             <el-menu-item index="contact">
               <el-icon><Message /></el-icon>
-              <span>聯絡我們</span>
+              <span>Contact</span>
             </el-menu-item>
             <el-menu-item index="blog">
               <el-icon><Document /></el-icon>
-              <span>部落格</span>
+              <span>Blog</span>
             </el-menu-item>
           </el-menu>
         </div>

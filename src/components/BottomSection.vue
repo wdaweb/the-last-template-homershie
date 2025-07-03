@@ -31,10 +31,10 @@
             <div class="bottom-widget">
               <h5 class="widget-title">Information</h5>
               <ul>
-                <li><a href="/services/">Services</a></li>
-                <li><a href="/portfolio/">Portfolio</a></li>
-                <li><a href="/shop/">Shop</a></li>
-                <li><a href="/contacts/">Contacts</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contacts</a></li>
               </ul>
             </div>
           </el-col>
@@ -50,9 +50,7 @@
                 </div>
                 <div class="contact-item">
                   <el-icon class="contact-icon" :size="18"><Message /></el-icon>
-                  <a class="email" href="mailto:%65xa%6dp%6ce@exam%70%6ce.com"
-                    >example@example.com</a
-                  >
+                  <a class="email" href="#">example@example.com</a>
                 </div>
                 <div class="contact-item">
                   <el-icon class="contact-icon" :size="18"><Phone /></el-icon>

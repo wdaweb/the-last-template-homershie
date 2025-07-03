@@ -7,14 +7,21 @@
         </el-col>
         <el-col :span="24">
           <el-tabs v-model="activeName" class="demo-tabs" @tab-click="handleClick">
-            <el-tab-pane label="Featured (2)" name="first">
+            <!-- 使用 v-for 動態渲染 tab-pane -->
+            <el-tab-pane
+              v-for="(tab, index) in tabData"
+              :key="tab.name"
+              :label="tab.label"
+              :name="tab.name"
+            >
               <div
                 class="tab-content"
-                :class="{ 'tab-enter': isAnimating && activeName === 'first' }"
+                :class="getTabClass(tab.name, index)"
+                :style="getTabStyle(tab.name, index)"
               >
                 <el-row :gutter="40">
                   <el-col :span="6">
-                    <h4 class="color-sec">Featured</h4>
+                    <h4 class="color-sec">{{ tab.title }}</h4>
                     <p class="text-white">
                       Lorem ipsum dolor sit amet consectetur. Lectus mattis dignissim elit quis
                       scelerisque ut nisl nibh a. Lorem ipsum dolor sit amet consectetur. Lectus
@@ -23,7 +30,7 @@
                     </p>
                   </el-col>
                   <el-col :span="18">
-                    <h5 class="text-white">Featured</h5>
+                    <h5 class="text-white">{{ tab.title }}</h5>
                     <p class="text-white">
                       Lorem ipsum dolor sit amet consectetur. Lectus mattis dignissim elit quis
                       scelerisque ut nisl nibh a. Lorem ipsum dolor sit amet consectetur. Lectus
@@ -31,109 +38,7 @@
                       consectetur.
                     </p>
                     <div class="cmsmasters_img cmsmasters_image_n">
-                      <img
-                        decoding="async"
-                        src="https://nexus.uiparadox.com/wp-content/uploads/2024/09/p-04-3.png"
-                      />
-                    </div>
-                  </el-col>
-                </el-row>
-              </div>
-            </el-tab-pane>
-            <el-tab-pane label="Web Design" name="second">
-              <div
-                class="tab-content"
-                :class="{ 'tab-enter': isAnimating && activeName === 'second' }"
-              >
-                <el-row :gutter="40">
-                  <el-col :span="6">
-                    <h4 class="color-sec">Web Design</h4>
-                    <p class="text-white">
-                      Lorem ipsum dolor sit amet consectetur. Lectus mattis dignissim elit quis
-                      scelerisque ut nisl nibh a. Lorem ipsum dolor sit amet consectetur. Lectus
-                      mattis dignissim elit quis scelerisque. Lorem ipsum dolor sit amet
-                      consectetur.
-                    </p>
-                  </el-col>
-                  <el-col :span="18">
-                    <h5 class="text-white">Web Design</h5>
-                    <p class="text-white">
-                      Lorem ipsum dolor sit amet consectetur. Lectus mattis dignissim elit quis
-                      scelerisque ut nisl nibh a. Lorem ipsum dolor sit amet consectetur. Lectus
-                      mattis dignissim elit quis scelerisque. Lorem ipsum dolor sit amet
-                      consectetur.
-                    </p>
-                    <div class="cmsmasters_img cmsmasters_image_n">
-                      <img
-                        decoding="async"
-                        src="https://nexus.uiparadox.com/wp-content/uploads/2024/09/p-01-3.png"
-                      />
-                    </div>
-                  </el-col>
-                </el-row>
-              </div>
-            </el-tab-pane>
-            <el-tab-pane label="App Design" name="third">
-              <div
-                class="tab-content"
-                :class="{ 'tab-enter': isAnimating && activeName === 'third' }"
-              >
-                <el-row :gutter="40">
-                  <el-col :span="6">
-                    <h4 class="color-sec">App Design</h4>
-                    <p class="text-white">
-                      Lorem ipsum dolor sit amet consectetur. Lectus mattis dignissim elit quis
-                      scelerisque ut nisl nibh a. Lorem ipsum dolor sit amet consectetur. Lectus
-                      mattis dignissim elit quis scelerisque. Lorem ipsum dolor sit amet
-                      consectetur.
-                    </p>
-                  </el-col>
-                  <el-col :span="18">
-                    <h5 class="text-white">App Design</h5>
-                    <p class="text-white">
-                      Lorem ipsum dolor sit amet consectetur. Lectus mattis dignissim elit quis
-                      scelerisque ut nisl nibh a. Lorem ipsum dolor sit amet consectetur. Lectus
-                      mattis dignissim elit quis scelerisque. Lorem ipsum dolor sit amet
-                      consectetur.
-                    </p>
-                    <div class="cmsmasters_img cmsmasters_image_n">
-                      <img
-                        decoding="async"
-                        src="https://nexus.uiparadox.com/wp-content/uploads/2024/09/p-02-3.png"
-                      />
-                    </div>
-                  </el-col>
-                </el-row>
-              </div>
-            </el-tab-pane>
-            <el-tab-pane label="E-Commerce" name="fourth">
-              <div
-                class="tab-content"
-                :class="{ 'tab-enter': isAnimating && activeName === 'fourth' }"
-              >
-                <el-row :gutter="40">
-                  <el-col :span="6">
-                    <h4 class="color-sec">E-Commerce</h4>
-                    <p class="text-white">
-                      Lorem ipsum dolor sit amet consectetur. Lectus mattis dignissim elit quis
-                      scelerisque ut nisl nibh a. Lorem ipsum dolor sit amet consectetur. Lectus
-                      mattis dignissim elit quis scelerisque. Lorem ipsum dolor sit amet
-                      consectetur.
-                    </p>
-                  </el-col>
-                  <el-col :span="18">
-                    <h5 class="text-white">E-Commerce</h5>
-                    <p class="text-white">
-                      Lorem ipsum dolor sit amet consectetur. Lectus mattis dignissim elit quis
-                      scelerisque ut nisl nibh a. Lorem ipsum dolor sit amet consectetur. Lectus
-                      mattis dignissim elit quis scelerisque. Lorem ipsum dolor sit amet
-                      consectetur.
-                    </p>
-                    <div class="cmsmasters_img cmsmasters_image_n">
-                      <img
-                        decoding="async"
-                        src="https://nexus.uiparadox.com/wp-content/uploads/2024/09/p-03-3.png"
-                      />
+                      <img decoding="async" :src="tab.image" :alt="tab.title" />
                     </div>
                   </el-col>
                 </el-row>
@@ -150,26 +55,88 @@
 import { ref, watch, onMounted, nextTick } from 'vue'
 
 const activeName = ref('first')
+const lastActiveName = ref('first')
 const isAnimating = ref(false)
+
+// Tab 數據
+const tabData = ref([
+  {
+    name: 'first',
+    label: 'Featured (2)',
+    title: 'Featured',
+    image: 'https://nexus.uiparadox.com/wp-content/uploads/2024/09/p-04-3.png',
+  },
+  {
+    name: 'second',
+    label: 'Web Design',
+    title: 'Web Design',
+    image: 'https://nexus.uiparadox.com/wp-content/uploads/2024/09/p-01-3.png',
+  },
+  {
+    name: 'third',
+    label: 'App Design',
+    title: 'App Design',
+    image: 'https://nexus.uiparadox.com/wp-content/uploads/2024/09/p-02-3.png',
+  },
+  {
+    name: 'fourth',
+    label: 'E-Commerce',
+    title: 'E-Commerce',
+    image: 'https://nexus.uiparadox.com/wp-content/uploads/2024/09/p-03-3.png',
+  },
+])
 
 // 監聽 activeName 變化來觸發動畫
 watch(activeName, async (newVal, oldVal) => {
   if (newVal !== oldVal && oldVal !== undefined) {
-    // 先重置動畫狀態
-    isAnimating.value = false
-    await nextTick()
-
-    // 短暫延遲後開始動畫
-    setTimeout(() => {
-      isAnimating.value = true
-    }, 10)
+    lastActiveName.value = oldVal
+    isAnimating.value = true
 
     // 動畫結束後重置狀態
     setTimeout(() => {
       isAnimating.value = false
-    }, 610)
+    }, 500)
   }
 })
+
+// Tab 樣式控制
+const getTabStyle = (tabName, index) => {
+  // 所有 tab 都顯示，通過 z-index 和 transform 控制層級
+  return { display: 'block' }
+}
+
+// 動畫 class 控制
+const getTabClass = (tabName, index) => {
+  const currentIndex = getTabIndex(activeName.value)
+  const lastIndex = getTabIndex(lastActiveName.value)
+  const thisIndex = getTabIndex(tabName)
+
+  if (tabName === activeName.value) {
+    // 當前選中的 tab
+    if (isAnimating.value && lastIndex < currentIndex) {
+      return 'tab-anim-in' // 從下方滑入
+    }
+    return 'tab-active'
+  } else if (tabName === lastActiveName.value && isAnimating.value) {
+    // 上一個 tab，正在滑出
+    if (lastIndex > currentIndex) {
+      return 'tab-anim-out' // 向下滑出
+    }
+  } else if (thisIndex < currentIndex) {
+    // 在當前 tab 之前的 tab，保持在下方
+    return 'tab-below'
+  } else if (thisIndex > currentIndex) {
+    // 在當前 tab 之後的 tab，隱藏在下方
+    return 'tab-hidden'
+  }
+
+  return 'tab-hidden'
+}
+
+// 獲取 tab 索引
+const getTabIndex = (tabName) => {
+  return tabData.value.findIndex((tab) => tab.name === tabName)
+}
 
 // 初始載入時觸發動畫
 onMounted(async () => {
@@ -180,7 +147,7 @@ onMounted(async () => {
 
   setTimeout(() => {
     isAnimating.value = false
-  }, 700)
+  }, 600)
 })
 
 const handleClick = (tab, event) => {
@@ -190,23 +157,62 @@ const handleClick = (tab, event) => {
 
 <style scoped lang="scss">
 .tab-content {
-  transform: translateY(0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 1;
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.tab-content.tab-enter {
-  animation: slideInFromTop 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+.tab-hidden {
+  opacity: 0;
+  transform: translateY(100%);
+  z-index: 1;
 }
 
-@keyframes slideInFromTop {
-  0% {
+.tab-below {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 1; // 在下方
+}
+
+.tab-active {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 2; // 在中間
+}
+
+.tab-anim-in {
+  opacity: 1;
+  transform: translateY(100%);
+  z-index: 3; // 在最上層，從下方滑入
+  animation: slideInFromBottom 0.5s forwards;
+}
+
+.tab-anim-out {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 2; // 在中間，向下滑出
+  animation: slideOutToBottom 0.5s forwards;
+}
+
+@keyframes slideInFromBottom {
+  from {
     transform: translateY(100%);
-    opacity: 0;
   }
-  100% {
+  to {
     transform: translateY(0);
-    opacity: 1;
+  }
+}
+
+@keyframes slideOutToBottom {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
   }
 }
 
@@ -214,10 +220,13 @@ const handleClick = (tab, event) => {
 :deep(.el-tabs__content) {
   position: relative;
   overflow: hidden;
+  height: 100vh;
+  background-color: #141414;
 }
 
 :deep(.el-tab-pane) {
   position: relative;
+  height: 100%;
 }
 
 /* 自定義 el-tab 按鈕樣式 */
