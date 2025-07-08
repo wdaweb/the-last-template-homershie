@@ -9,7 +9,7 @@
           </h2>
         </el-col>
         <el-col :span="24">
-          <div class="cmsmasters_tabs tabs_mode_tour tabs_pos_right">
+          <div :class="['cmsmasters_tabs', 'tabs_mode_tour', { tabs_pos_right: !isMobile }]">
             <ul class="cmsmasters_tabs_list">
               <li
                 v-for="(tab, index) in tabs"
@@ -50,11 +50,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 
 const activeTab = ref(0)
 const lastTab = ref(0)
 const isAnimating = ref(false)
+const isMobile = ref(window.innerWidth < 768)
 
 const tabs = ref([
   {
@@ -110,6 +111,17 @@ const getTabStyle = (index) => {
   }
   return { display: 'none' }
 }
+
+// 響應式監聽
+const handleResize = () => {
+  isMobile.value = window.innerWidth < 768
+}
+onMounted(() => {
+  window.addEventListener('resize', handleResize)
+})
+onUnmounted(() => {
+  window.removeEventListener('resize', handleResize)
+})
 </script>
 
 <style scoped lang="scss">
@@ -118,11 +130,19 @@ const getTabStyle = (index) => {
 }
 
 .image-container {
-  position: relative;
   width: 100%;
-  height: 560px;
+  /* 不設 height，讓內容決定高度 */
   overflow: hidden;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .cmsmasters_tab {
@@ -175,6 +195,81 @@ const getTabStyle = (index) => {
   }
   to {
     transform: translateY(100%);
+  }
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  /* 修改容器佈局為上下排列 */
+  .cmsmasters_tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* 調整 tabs list 為水平排列 */
+  .cmsmasters_tabs_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    order: 1;
+  }
+
+  .cmsmasters_tabs_list_item {
+    flex: 0 0 auto;
+    margin: 0;
+  }
+
+  .cmsmasters_tabs_list_item a {
+    display: block;
+    padding: 12px 20px;
+  }
+
+  /* 調整 tabs wrap 為垂直排列 */
+  .cmsmasters_tabs_wrap {
+    width: 100% !important;
+    height: 300px; /* 或你想要的高度 */
+    order: 2;
+    position: relative;
+  }
+
+  .cmsmasters_tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    opacity: 1;
+    display: block;
+  }
+
+  .image-container {
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  /* 只顯示當前活動的 tab */
+  .cmsmasters_tab:not(.tab-active) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .cmsmasters_tabs_list {
+    gap: 8px;
+  }
+
+  .cmsmasters_tabs_list_item a {
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+
+  .image-container {
+    height: 250px;
   }
 }
 </style>

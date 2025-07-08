@@ -7,7 +7,7 @@
         </el-col>
       </el-row>
       <el-row class="content-row">
-        <el-col :span="8">
+        <el-col :lg="8" :md="12" :sm="24" :xs="24">
           <article
             id="post-376"
             class="cmsmasters_post_default post-376 post type-post status-publish format-image has-post-thumbnail hentry category-marketing tag-advice tag-must-do post_format-post-format-image"
@@ -86,7 +86,7 @@
             </div>
           </article>
         </el-col>
-        <el-col :span="8">
+        <el-col :lg="8" :md="12" :sm="24" :xs="24">
           <article
             id="post-372"
             class="cmsmasters_post_default post-372 post type-post status-publish format-image has-post-thumbnail hentry category-analytics tag-advice tag-tips post_format-post-format-image"
@@ -165,7 +165,7 @@
             </div>
           </article>
         </el-col>
-        <el-col :span="8">
+        <el-col :lg="8" :md="12" :sm="24" :xs="24">
           <article
             id="post-2967"
             class="cmsmasters_post_default post-2967 post type-post status-publish format-image has-post-thumbnail hentry category-design tag-advice tag-content post_format-post-format-image"
@@ -268,5 +268,11 @@
 
 .cmsmasters_post_read_more {
   transition: all 0.3s ease;
+}
+
+@media (max-width: 1200px) {
+  .el-col {
+    margin-bottom: 24px;
+  }
 }
 </style>

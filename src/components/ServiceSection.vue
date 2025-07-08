@@ -12,7 +12,7 @@
         </el-col>
       </el-row>
       <el-row class="service-row">
-        <el-col :span="12">
+        <el-col :lg="12" :md="24" :sm="24" :xs="24">
           <h3><span class="gradient-stroke-text">01</span> –</h3>
           <h3>Setting Your <span class="gradient-stroke-text">GOALS</span></h3>
           <p>
@@ -24,12 +24,12 @@
           </p>
           <a href="#" class="cmsmasters_button cus-btn"><span>LET'S CREATE</span></a>
         </el-col>
-        <el-col :span="12" class="service-center">
+        <el-col :lg="12" :md="24" :sm="24" :xs="24" class="service-center">
           <img src="https://nexus.uiparadox.com/wp-content/uploads/2024/09/service-1-1-3.png" />
         </el-col>
       </el-row>
       <el-row class="service-row service-row-reverse">
-        <el-col :span="12">
+        <el-col :lg="12" :md="24" :sm="24" :xs="24">
           <h3><span class="gradient-stroke-text">02</span> –</h3>
           <h3>Visual and <span class="gradient-stroke-text">CONTENT</span></h3>
           <p>
@@ -41,12 +41,12 @@
           </p>
           <a href="#" class="cmsmasters_button cus-btn"><span>LET'S CREATE</span></a>
         </el-col>
-        <el-col :span="12">
+        <el-col :lg="12" :md="24" :sm="24" :xs="24">
           <img src="https://nexus.uiparadox.com/wp-content/uploads/2024/09/service-2-3.png" />
         </el-col>
       </el-row>
       <el-row class="service-row">
-        <el-col :span="12">
+        <el-col :lg="12" :md="24" :sm="24" :xs="24">
           <h3><span class="gradient-stroke-text">03</span> –</h3>
           <h3>Testing and <span class="gradient-stroke-text">LAUNCHING</span></h3>
           <p>
@@ -58,7 +58,7 @@
           </p>
           <a href="#" class="cmsmasters_button cus-btn"><span>LET'S CREATE</span></a>
         </el-col>
-        <el-col :span="12" class="service-center">
+        <el-col :lg="12" :md="24" :sm="24" :xs="24" class="service-center">
           <img src="https://nexus.uiparadox.com/wp-content/uploads/2024/09/service-3-3.png" />
         </el-col>
       </el-row>
@@ -105,4 +105,10 @@
   }
 }
 /* Finish Button */
+
+@media (max-width: 1200px) {
+  .service-row-reverse {
+    flex-direction: row;
+  }
+}
 </style>

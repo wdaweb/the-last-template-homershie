@@ -10,13 +10,13 @@
         </el-col>
       </el-row>
       <el-row class="content-row" :gutter="40">
-        <el-col :span="12" class="img-center">
+        <el-col :lg="12" :md="24" :sm="24" :xs="24" class="img-center">
           <img
             decoding="async"
             src="https://nexus.uiparadox.com/wp-content/uploads/2024/09/map-img-3.png"
           />
         </el-col>
-        <el-col :span="12">
+        <el-col :lg="12" :md="24" :sm="24" :xs="24">
           <swiper
             :modules="[SwiperPagination]"
             :pagination="{ clickable: true }"
@@ -136,6 +136,10 @@ import 'swiper/css/pagination'
 </script>
 
 <style scoped lang="scss">
+.el-main {
+  overflow: hidden;
+}
+
 .title-row {
   padding: 80px 0;
 }

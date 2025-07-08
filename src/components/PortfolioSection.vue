@@ -20,7 +20,7 @@
                 :style="getTabStyle(tab.name, index)"
               >
                 <el-row :gutter="40">
-                  <el-col :span="6">
+                  <el-col :lg="6" :md="12" :sm="24" :xs="24">
                     <h4 class="color-sec">{{ tab.title }}</h4>
                     <p class="text-white">
                       Lorem ipsum dolor sit amet consectetur. Lectus mattis dignissim elit quis
@@ -29,7 +29,7 @@
                       consectetur.
                     </p>
                   </el-col>
-                  <el-col :span="18">
+                  <el-col :lg="18" :md="12" :sm="24" :xs="24">
                     <h5 class="text-white">{{ tab.title }}</h5>
                     <p class="text-white">
                       Lorem ipsum dolor sit amet consectetur. Lectus mattis dignissim elit quis

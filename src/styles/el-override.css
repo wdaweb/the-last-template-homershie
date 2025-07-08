@@ -21,7 +21,9 @@
 /* 在小螢幕上增加更多內邊距 */
 @media (max-width: 768px) {
   .el-container {
-    padding: 0 15px !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+    padding: 0 !important;
   }
 
   .el-main {
@@ -144,4 +146,9 @@
 .el-tabs__nav-wrap:after,
 .el-tabs__active-bar {
   display: none !important;
+}
+
+.el-drawer {
+  --el-drawer-bg-color: transparent;
+  --el-drawer-padding-primary: 0;
 }

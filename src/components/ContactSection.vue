@@ -7,7 +7,7 @@
         </el-col>
       </el-row>
       <el-row class="content-row">
-        <el-col :span="11">
+        <el-col :lg="11" :md="24" :sm="24" :xs="24">
           <div id="cmsmasters_column_k0bxql2by" class="cmsmasters_column">
             <div class="cmsmasters_column_inner">
               <div class="cmsmasters_text">
@@ -79,7 +79,7 @@
             </div>
           </div>
         </el-col>
-        <el-col :span="11">
+        <el-col :lg="11" :md="24" :sm="24" :xs="24">
           <div id="cmsmasters_column_8yewr13vm" class="cmsmasters_column">
             <div class="cmsmasters_column_inner">
               <div class="cmsmasters_contact_form">
@@ -199,6 +199,9 @@ import { Phone, Message, Location, Share } from '@element-plus/icons-vue'
 </script>
 
 <style scoped lang="scss">
+.el-main {
+  overflow: hidden;
+}
 .title-row {
   padding-top: 80px;
   padding-bottom: 48px;
@@ -228,5 +231,17 @@ import { Phone, Message, Location, Share } from '@element-plus/icons-vue'
 
 p {
   color: #92949f;
+}
+
+.contact-information-wrapper .cmsmasters_icon_wrap {
+  width: 48px;
+  height: 48px;
+}
+
+@media (max-width: 1200px) {
+  .el-col {
+    margin: 0;
+    margin-bottom: 24px;
+  }
 }
 </style>

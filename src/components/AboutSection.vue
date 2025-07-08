@@ -2,7 +2,7 @@
   <el-container class="about-section" id="about">
     <el-main>
       <el-row justify="center">
-        <el-col :span="22">
+        <el-col :xl="22" :lg="22" :md="22" :sm="24" :xs="24">
           <h2 class="section-title">
             Experience the power of digital marketing with
             <span class="gradient-stroke-text">DIGITALNEXUS</span>
@@ -11,7 +11,7 @@
         <el-col :span="2"></el-col>
       </el-row>
       <el-row>
-        <el-col :span="12" :offset="12">
+        <el-col :xl="12" :lg="12" :md="24" :sm="24" :xs="24" :offset="12" class="about-content">
           <p>
             A creative agency is a company that provides a range of services to help businesses and
             organizations with their creative and marketing needs. Creative agencies often employ a
@@ -66,4 +66,10 @@
   }
 }
 /* Finish Button */
+
+@media (max-width: 1200px) {
+  .about-content {
+    margin-left: 0 !important;
+  }
+}
 </style>

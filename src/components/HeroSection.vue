@@ -17,7 +17,7 @@
           </h1>
           <a class="button hero-button">BOOK A FREE CONSULTATION</a>
         </el-col>
-        <el-col :span="6">
+        <el-col :span="6" class="desktop-only">
           <p>
             A creative agency is a <br />company that provides a range <br />of services to help
             businesses<br />
@@ -25,7 +25,21 @@
             creative and marketing needs.
           </p>
         </el-col>
-        <el-col :span="6" :offset="6">
+        <el-col
+          :span="6"
+          :offset="6"
+          :xs="24"
+          :xs-offset="0"
+          :sm="12"
+          :sm-offset="0"
+          :md="6"
+          :md-offset="6"
+          :lg="6"
+          :lg-offset="6"
+          :xl="6"
+          :xl-offset="6"
+          class="test-responsive-col"
+        >
           <p style="background: none">
             fiverr. <el-icon class="star-icon" :size="16"><Star /></el-icon> 5.0
           </p>
@@ -40,7 +54,7 @@
       <el-row>
         <el-col :span="24">
           <swiper
-            :slides-per-view="5"
+            :slides-per-view="slidesPerView"
             :space-between="10"
             :autoplay="{ delay: 3000, disableOnInteraction: false }"
             :loop="true"
@@ -99,7 +113,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay } from 'swiper/modules'
 import { Star } from '@element-plus/icons-vue'
@@ -110,6 +124,20 @@ import 'swiper/css'
 // Swiper 實例引用
 const swiperRef = ref(null)
 
+// 響應式 slides-per-view 計算
+const slidesPerView = ref(5)
+
+// 更新 slides-per-view 的函數
+const updateSlidesPerView = () => {
+  if (window.innerWidth < 768) {
+    slidesPerView.value = 1 // sm 尺寸
+  } else if (window.innerWidth < 1200) {
+    slidesPerView.value = 3 // 小於 1200px
+  } else {
+    slidesPerView.value = 5 // 大螢幕
+  }
+}
+
 // 事件處理函數
 const onSwiper = (swiper) => {
   swiperRef.value = swiper
@@ -119,6 +147,20 @@ const onSwiper = (swiper) => {
 const onSlideChange = () => {
   console.log('Slide changed')
 }
+
+// 組件掛載時設置
+onMounted(() => {
+  // 初始化 slides-per-view
+  updateSlidesPerView()
+
+  // 監聽視窗大小變化
+  window.addEventListener('resize', updateSlidesPerView)
+})
+
+// 組件卸載時清理
+onUnmounted(() => {
+  window.removeEventListener('resize', updateSlidesPerView)
+})
 </script>
 
 <style scoped lang="scss">
@@ -234,5 +276,19 @@ p {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .test-responsive-col {
+    margin-left: 0 !important;
+  }
+}
+@media (max-width: 1200px) {
+  .desktop-only {
+    display: none;
+  }
+  p {
+    margin-left: 0 !important;
+  }
 }
 </style>

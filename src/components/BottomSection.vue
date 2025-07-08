@@ -4,7 +4,7 @@
       <el-main>
         <el-row :gutter="40" class="title-row">
           <!-- Logo -->
-          <el-col :span="3">
+          <el-col :lg="3" :md="6" :sm="24" :xs="24">
             <div class="bottom-widget">
               <div class="logo-section">
                 <img
@@ -16,7 +16,7 @@
             </div>
           </el-col>
           <!-- Description -->
-          <el-col :span="20">
+          <el-col :lg="18" :md="17" :sm="24" :xs="24">
             <div class="bottom-widget">
               <p class="description">
                 Lorem ipsum dolor sit amet consectetur. Eget ornare ac eleifend leo mauris
@@ -95,6 +95,9 @@ import { Location, Message, Phone } from '@element-plus/icons-vue'
 </script>
 
 <style scoped lang="scss">
+.el-main {
+  overflow: hidden;
+}
 a {
   transition: all 0.3s ease;
   font-weight: 500;
